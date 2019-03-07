@@ -1,0 +1,231 @@
+*/* {
+  box-sizing: border-box;
+}*/
+
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'GillSansB';
+  font-size: 45px;
+/*  left: 300 px; */
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear:both;
+}
+
+header a {
+  color: #000000;
+}
+
+/*header a:visited {
+    color: yellow;
+} */
+
+header a:hover {
+  color: RGB(250,251,146);
+}
+
+
+h1{
+  font-family: 'GillSansL';
+  font-size: 18px;
+  top: 100px;
+  margin-top: 400px;
+  margin-left: 15px;
+
+}
+
+h2 a{
+  font-family: 'Caslon3LT';
+  font-size: 16px;
+  margin-left: 15px;
+  color: black;
+
+}
+
+h2 a:visited {
+    color: black;
+}
+
+h2 a:hover {
+  color: RGB(250,251,146);
+
+}
+
+h3 a{
+font-family: 'Caslon3LT';
+font-size: 16px;
+color: black;
+margin-left: 15px;
+
+}
+
+h3 a:visited {
+    color: black;
+}
+
+h3 a:hover {
+  color: RGB(250,251,146);
+
+}
+
+nav a {
+  list-style-type: none;
+  text-align: center;
+
+}
+
+ul {
+  list-style-type:none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+
+
+
+}
+/*  fonction use for hamburger menu!!!
+nav li {
+  position: relative;
+  text-align: left;
+
+  display: inline-block;
+  border:1px solid black;  cadre
+  margin:0px 4px;
+  padding: 2px 6px;
+  width: 200px;
+  box-sizing: content-box;
+} */
+
+/*nav li .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transform: translateY(-2em);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+} *
+/* animation nav
+
+nav li:focus .dropdown,
+nav li:focus-within .dropdown,
+nav li:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+nav li .dropdown li {
+  display: block;
+  margin: 0;
+}
+
+nav .hamburger {
+  display: none;
+  width: 64px;
+  height: 64px;
+  margin-left: 32px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 32px;
+}  */
+
+.container {    /* solid block first text */
+    border: 0px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.col li {
+  flex-grow: 1;
+  border: 1px solid black;
+  display: block;
+  width: 100px;
+}
+
+.col .li-header {
+  /* order: -1; */
+  flex-grow: 2;
+}
+
+aside {
+  width: 33%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+}
+
+#logo {
+  display: block;
+  background-image: url(../image/Logo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 520px;
+  height: 220px;
+  text-indent: -100%;
+  overflow: hidden;
+  margin: 0 auto;
+  /* transform: translateX(0); */
+  /* transition-property: transform;
+  transition-duration: 0.2s; */
+}
+
+
+/* animation logo rotation */
+/*#logo:hover {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1.0);
+  }
+
+  33% {
+    transform: rotate(180deg) scale(0.3);
+  }
+
+  66% {
+    transform: rotate(320deg) scale(1.25);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.0);
+  }
+}  */

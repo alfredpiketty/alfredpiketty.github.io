@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Caslon3LT';
+  src: url('Fonts/Caslon3LT/Caslon3LTStd-Roman.otf');
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+
+
+}
+
+@font-face {
+  font-family: 'GillSansB';
+  src: url('Fonts/Gillsans/GillSansMT-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+
+@font-face {
+  font-family: 'GillSansL';
+  src: url('Fonts/Gillsans/GillSansMT-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
