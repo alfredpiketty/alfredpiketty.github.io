@@ -13,124 +13,180 @@
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/mobile.css" />
+
+	<!-- Core CSS file -->
+	<link rel="stylesheet" href="dist/photoswipe.css">
+
+	<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+	     In the folder of skin CSS file there are also:
+	     - .png and .svg icons sprite,
+	     - preloader.gif (for browsers that do not support CSS animations) -->
+	<link rel="stylesheet" href="dist/default-skin/default-skin.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<!-- Core JS file -->
+	<script src="dist/photoswipe.min.js"></script>
+
+	<!-- UI JS file -->
+	<script src="dist/photoswipe-ui-default.min.js"></script>
+
 </head>
 
-<body id="home">
+<body id="home">   <!-- h1, h2, h3 in the header and my nav not in the header -->
 
 	<header>
 		<a id="logo" href="/">Alfredo</a>
 
-		<nav>
-			<ul class="default-menu">
-				<li>
-					<a href="#reel">ShowReel</a>
-				<!--	<ul class="dropdown">
-						<li>more</li>
-						<li>content</li>
-					</ul> -->
-				</li>
-				<li>
-					<a href="#3d">3D Modeling</a>
-				<!--	<ul class="dropdown">
-						<li>more</li>
-						<li>content</li>
-					</ul>  -->
-				</li>
-				<li>
-					<a href="gon">GO-N Productions</a>
-				<!--	<ul class="dropdown">
-						<li>more</li>
-						<li>content</li>
-					</ul> -->
-				</li>
-        <li>
-            <a href="illu">Drawing</a>
-        </li>
-        <li>
-            <a href="artdeco">Art Deco</a>
-        </li>
-			</ul>
-			<div class="hamburger"></div>
-		</nav>
+		<h1>Illustrator
+			<br>
+		Motion Designer
+		<br>
+		Graphic Designer
+		<br>
+		3D Artist
+		<br>
+		Carpentry </h1>
+
+		<div>
+		<h2 class="link">
+			<a href="mailto:alfred.piketty@gmail.com" &bcc= "alfred1.piketty@e-artsup.net"> Alfred.piketty@gmail.com
+			</a>
+		</h2>
+
+		<h3 class="link">
+			<a href="https://www.instagram.com/demi_rouge/"> Instagram @Demi_Rouge </a>
+
+		</h3>
+
+	</div>
+
+
 	</header>
+	<nav>
+		<div class="menu">
+			<li>
+				<a href="#reel">ShowReel</a>
+			<!--	<ul class="dropdown">
+					<li>more</li>
+					<li>content</li>
+				</ul> -->
+			</li>
+			<li>
+				<a href="#3d" class="scroll_to">3D Modeling</a>
+			<!--	<ul class="dropdown">
+					<li>more</li>
+					<li>content</li>
+				</ul>  -->
+			</li>
+			<li>
+				<a href="gon">GO-N Productions</a>
+			<!--	<ul class="dropdown">
+					<li>more</li>
+					<li>content</li>
+				</ul> -->
+			</li>
+			<li>
+					<a href="#illu"  class="scroll_to" > Drawing</a>
+			</li>
+			<li>
+					<a href="artdeco">Art Deco</a>
+			</li>
+		</div>
 
-	<section class="container">
+		<div class="hamburger"></div>
+	</nav>
 
-		<article>
-			<h1>Illustrator
-        <br>
-			Motion Designer
-      <br>
-		  Graphic Designer
-      <br>
-      3D Artist
-      <br>
-      Carpentry </h1>
+	</div>
 
-      <h2>
-        <a href="mailto:alfred.piketty@gmail.com" &bcc= "alfred1.piketty@e-artsup.net"> Alfred.piketty@gmail.com
-        </a>
-      </h2>
+	<div id="3d" class="container_1">
+		<!-- <div class="row">
+			<img id="thumb" style="width:180px; height:auto;" src="Image/illu/illu1.png"/>
+		</div> -->
+	</div>
 
-      <h3>
-        <a href="https://www.instagram.com/demi_rouge/"> Instagram @Demi_Rouge </a>
+	<div id= "illu" class="container_2">
 
-      </h3>
+		<div class="row">
+			<h1>
+				Drawing
+			</h1>
+			<img id="thumb" style="width:100%; height:100%;" src="Image/illu/illu1.png"/>
+		</div>
+	</div>
 
+	</div>
 
-			<div class="clearfix"></div>
+	<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-			</p>
-			<div class="clearfix"></div>
-		</article>
+		    <!-- Background of PhotoSwipe.
+		         It's a separate element as animating opacity is faster than rgba(). -->
+		    <div class="pswp__bg"></div>
 
-		<article>
-			<!-- Additional Article -->
-		</article>
+		    <!-- Slides wrapper with overflow:hidden. -->
+		    <div class="pswp__scroll-wrap">
 
-	</section>
+		        <!-- Container that holds slides.
+		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		            Don't modify these 3 pswp__item elements, data is added later on. -->
+		        <div class="pswp__container">
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		        </div>
 
-<!--	<aside>
-		<h3>My Major Projects</h3>
-		<dl>
-			<dt><a href="http://aremysitesup.com">Are My Sites Up?</a></dt>
-			<dd>Monitor your sites</dd>
+		        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		        <div class="pswp__ui pswp__ui--hidden">
 
-			<dt><a href="http://css-tricks.com">CSS-Tricks</a></dt>
-			<dd>A web design community</dd>
+		            <div class="pswp__top-bar">
 
-			<dt><a href="http://digwp.com">Digging Into WordPress</a></dt>
-			<dd>Learn about WordPress</dd>
-		</dl>
-	</aside>
+		                <!--  Controls are self-explanatory. Order can be changed. -->
 
-	<footer class="container">
-		<h4 id="people">People I Enjoy</h4>
-		<ul class="col">
-			<li class="li-header">People:</li>
-			<li><a href="http://fastfoodreviewed.com">Jesse Lynch</a></li>
-			<li><a href="http://jeffcampana.com">Jeff Campana</a></li>
-			<li><a href="http://perishablepress.com">Jeff Starr</a></li>
-		</ul>
-		<ul class="col">
-			<li class="li-header">People:</li>
-			<li><a href="http://davidwalsh.name">David Walsh</a></li>
-			<li><a href="http://thestrategicretreat.com">Jeff Penman</a></li>
-			<li><a href="http://http://shiftedfrequency.com">Richard Felix Jr.</a></li>
-		</ul>
+		                <div class="pswp__counter"></div>
 
-		<h4 id="sandwiches">Sandwiches</h4>
-		<ul class="col" id="sandwich-list">
-			<li><a href="http://jimmyjohns.com">Jimmy Johns</a></li>
-			<li><a href="http://subway.com">Subway</a></li>
-			<li><a href="http://potbelly.com">Potbelly</a></li>
-		</ul>
+		                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-		adapted from <a href="https://css-tricks.com/what-beautiful-html-code-looks-like/" target="_blank">What Beautiful HTML Code Looks Like</a> &copy;2007-2019 Chris Coyier
-	</footer>
+		                <button class="pswp__button pswp__button--share" title="Share"></button>
 
-	<script src='//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script> -->
-	<!-- <script src='/js/main.js'></script> -->
+		                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+		                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+		                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+		                <!-- element will get class pswp__preloader--active when preloader is running -->
+		                <div class="pswp__preloader">
+		                    <div class="pswp__preloader__icn">
+		                      <div class="pswp__preloader__cut">
+		                        <div class="pswp__preloader__donut"></div>
+		                      </div>
+		                    </div>
+		                </div>
+		            </div>
+
+		            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		                <div class="pswp__share-tooltip"></div>
+		            </div>
+
+		            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		            </button>
+
+		            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		            </button>
+
+		            <div class="pswp__caption">
+		                <div class="pswp__caption__center"></div>
+		            </div>
+
+		        </div>
+
+		    </div>
+
+		</div>
+
+		<script src="js/script.js"></script>
 
 </body>
 
