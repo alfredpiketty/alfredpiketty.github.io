@@ -1,18 +1,18 @@
 var pswpElement = $('.pswp')[0];
 
-// var items_3d = [
-// 		{
-// 			src: 'Image/3d/3d_1.jpg'
-// 			w: 1536,
-// 			h: 864
-// 		},
-// 		{
-// 			src: 'Image/3d/3d_2.png'
-// 			w: 1536,
-// 			h: 864
-// 		},
-//
-// ];
+var items_3d = [
+		{
+			src: 'Image/3d/3d_1.jpg',
+			w: 1536,
+			h: 864
+		},
+		{
+			src: 'Image/3d/3d_2.png',
+			w: 1536,
+			h: 864
+		},
+
+];
 
 var items_illu = [
 	{
@@ -38,13 +38,25 @@ var options = {
 };
 
 	// Initializes and opens PhotoSwipe
-var openPhotoSwipe = function() {
-	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items_illu, options);
+var openPhotoSwipe = function(list) {
+	var _list;
+
+	if (list == 'illu') {
+		_list = items_illu;
+	} else if (list == '3d') {
+		_list = items_3d;
+	}
+
+	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, _list, options);
 	gallery.init();
 };
 
+$('#3d').click(function() {
+	openPhotoSwipe('3d')
+});
+
 $('#thumb').click(function() {
-	openPhotoSwipe();
+	openPhotoSwipe('illu');
 });
 
 console.log('its working');
