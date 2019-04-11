@@ -55,7 +55,7 @@ $('#3d').click(function() {
 	openPhotoSwipe('3d')
 });
 
-$('#thumb').click(function() {
+$('#illu').click(function() {
 	openPhotoSwipe('illu');
 });
 
