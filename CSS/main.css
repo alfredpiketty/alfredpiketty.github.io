@@ -1,9 +1,9 @@
 */* {
   box-sizing: border-box;
 }*/
-/* html {
+html {
   overflow-y: scroll;
-} */
+}
 
 
 body {
@@ -106,11 +106,10 @@ color: black;
 }
 
 h2 {
-  position: absolute;
-  /* left: 15px; */
-  top : 2vh;
-  padding-left: 2vh;
-  /* padding-top: 0vh; */
+position: absolute;
+top : 2vh;
+left: 2vh;
+
 }
 
 h3 {
@@ -410,6 +409,9 @@ aside {
   text-indent: -100%;
   overflow: hidden;
   margin: 2em auto 0  auto;
+  display: flex;
+  /* flex-direction: column;
+  align-items: center;  */
   /* transform: translateX(0); */
   /* transition-property: transform;
   transition-duration: 0.2s; */
